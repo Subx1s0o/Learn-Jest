@@ -1,13 +1,33 @@
-import { toLowerCase, toUpperCase } from "../src/utils";
+import { getStringInfo, toUpperCase } from "../src/utils";
 
 describe("utils", () => {
-  it("should convert string to uppercase", () => {
-    const result = toUpperCase("hello");
-    expect(result).toBe("HELLO");
+  describe("toUpperCase", () => {
+    it("should convert string to uppercase", () => {
+      //arrangement
+      const sut = toUpperCase;
+      const expected = "HELLO";
+
+      //action
+      const actual = sut("hello");
+
+      //assertion
+      expect(actual).toBe(expected);
+    });
   });
 
-  it("should convert string to lowercase", () => {
-    const result = toLowerCase("HELLO");
-    expect(result).toBe("hello");
+  describe("getStringInfo", () => {
+    it("should return info for valid string", () => {
+      const actual = getStringInfo("hello");
+      const expected = {
+        lowercase: "hello",
+        uppercase: "HELLO",
+        capitalcase: "Hello",
+      };
+
+      expect(actual).toEqual(expected);
+      expect(actual.uppercase).toHaveLength(5);
+
+      expect(actual.lowercase).toContain("l");
+    });
   });
 });
