@@ -33,5 +33,13 @@ describe("utils", () => {
         done();
       }
     });
+
+    // ALIASES
+
+    // TODO
+    it.todo("should throw error for invalid - promise");
+
+    // SKIP
+    xit("should throw error for invalid - async await", () => {});
   });
 });
