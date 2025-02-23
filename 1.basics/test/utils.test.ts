@@ -1,4 +1,4 @@
-import { getStringInfo, toUpperCase } from "../src/utils";
+import { getStringInfo, toUpperCase } from "../utils";
 
 describe("utils", () => {
   describe("toUpperCase", () => {
