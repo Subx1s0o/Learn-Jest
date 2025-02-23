@@ -30,4 +30,17 @@ describe("utils", () => {
       expect(actual.lowercase).toContain("l");
     });
   });
+
+  describe("toUpperCase examples", () => {
+    it.each([
+      { input: "hello", expected: "HELLO" },
+      { input: "world", expected: "WORLD" },
+      { input: "hello world", expected: "HELLO WORLD" },
+      { input: "HELLO WORLD", expected: "HELLO WORLD" },
+    ])(" should convert $input to $expected", ({ input, expected }) => {
+      const sut = toUpperCase;
+      const actual = sut(input);
+      expect(actual).toBe(expected);
+    });
+  });
 });
