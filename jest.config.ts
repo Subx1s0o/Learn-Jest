@@ -1,7 +1,7 @@
 import type { Config } from "@jest/types";
 
-const baseDir = "<rootDir>/src/3.PasswordChecker";
-const baseTestDir = "<rootDir>/src/3.PasswordChecker/test";
+const baseDir = "<rootDir>/src/4.doubles";
+const baseTestDir = "<rootDir>/src/4.doubles/test";
 
 export default {
   preset: "ts-jest",
